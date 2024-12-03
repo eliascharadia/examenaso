@@ -1,0 +1,41 @@
+ Enunciado 2do Parcial 
+
+A - LVM
+
+    Scriptear:
+        - Utilizar el disco de 1G sobrante.
+        - Extender el lv_workareas en su totalidad
+        
+
+
+B - Bash scripting
+
+    - Dejar el script en: /usr/local/bin/2p_check_ulr.sh
+    - Adaptar el bash script de Check_url para que funcione con el siguiente Listado.
+      cat $HOME/2p_2024/B_BashScript/Lista.txt
+
+
+C - Docker:
+    - Agregar sus datos personales en el archivo index.html
+    
+    - Scriptear (Tareas_Docker.sh):
+        - Generar una imagen con el nombre: 2p_2024_<tu-Apellido>
+        - Subir la imagen generada en dockerhub
+
+    - Generar un bash-script en: /usr/local/bin/2p_run_docker.sh para que:
+        - Ejecute la imagen sobre el puerto 8082 del host
+        - Montar la carpeta web/file en /usr/share/nginx/html/file
+        - Reemplazar el contenido del archivo info.txt con:
+            - informacion de Hash del usuario
+            - Comando utilizado para hacer dicho filtro
+
+
+C - Ansible:
+    - Agregar un rol con nombre: 2p_<tu-apellido>
+    - Desde dicho role, imprimir un cartel por pantalla que diga
+        "Me estoy ejecutando dentro del role: {{ role_name }}"
+
+    - scriptear:
+       Dejar dentro de la carpeta de Ansible, un archivo run_playbook.sh 
+       Con la linea de comando para la ejecucion del playbook
+

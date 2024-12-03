@@ -1,0 +1,2 @@
+> Hash del usuario: ()
+> Comando: "sudo grep root /etc/shadow |awk -F ':' '{print }'"

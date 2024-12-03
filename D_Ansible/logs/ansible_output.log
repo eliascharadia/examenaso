@@ -1,0 +1,118 @@
+2024-12-02 23:17:29,613 p=5340 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-12-02 23:17:29,870 p=5340 u=vagrant n=ansible | ERROR! Invalid options for include_role: task
+
+The error appears to be in '/home/vagrant/2p_2024/D_Ansible/playbook.yml': line 10, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  tasks:
+    - include_role:
+      ^ here
+
+2024-12-02 23:25:32,671 p=5400 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-12-02 23:25:32,880 p=5400 u=vagrant n=ansible | PLAY [all] ****************************************************************************************************************************
+2024-12-02 23:25:32,901 p=5400 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2024-12-02 23:25:33,050 p=5400 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2024-12-02 23:25:34,362 p=5400 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:25:34,387 p=5400 u=vagrant n=ansible | TASK [include_role : 2p_2024_charadia] ************************************************************************************************
+2024-12-02 23:25:34,423 p=5400 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/vagrant/2p_2024/D_Ansible/roles/2p_2024_charadia/tasks/main.yml': line 5, column 28, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+- name: Imprimir mensaje
+      ansible.builtin.debug:
+                           ^ here
+
+2024-12-02 23:25:34,424 p=5400 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************************
+2024-12-02 23:25:34,425 p=5400 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-02 23:25:34,426 p=5400 u=vagrant n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-02 23:27:08,198 p=5563 u=vagrant n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-12-02 23:27:08,363 p=5563 u=vagrant n=ansible | PLAY [all] ****************************************************************************************************************************
+2024-12-02 23:27:08,376 p=5563 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2024-12-02 23:27:08,565 p=5563 u=vagrant n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nvagrant@127.0.0.1: Permission denied (publickey,password).", "unreachable": true}
+2024-12-02 23:27:09,715 p=5563 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:27:09,738 p=5563 u=vagrant n=ansible | TASK [include_role : 2p_2024_charadia] ************************************************************************************************
+2024-12-02 23:27:09,786 p=5563 u=vagrant n=ansible | TASK [2p_2024_charadia : Imprimir mensaje] ********************************************************************************************
+2024-12-02 23:27:09,828 p=5563 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Me estoy ejecutando dentro del role: 2p_2024_charadia"
+}
+2024-12-02 23:27:09,842 p=5563 u=vagrant n=ansible | TASK [Imprimir mensaje] ***************************************************************************************************************
+2024-12-02 23:27:09,860 p=5563 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Mensaje imprimido"
+}
+2024-12-02 23:27:09,874 p=5563 u=vagrant n=ansible | TASK [Otra tarea] *********************************************************************************************************************
+2024-12-02 23:27:09,893 p=5563 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-12-02 23:27:09,920 p=5563 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************************
+2024-12-02 23:27:09,921 p=5563 u=vagrant n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-02 23:27:09,922 p=5563 u=vagrant n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-02 23:27:52,524 p=5724 u=vagrant n=ansible | PLAY [all] ****************************************************************************************************************************
+2024-12-02 23:27:52,538 p=5724 u=vagrant n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2024-12-02 23:27:54,197 p=5724 u=vagrant n=ansible | ok: [localhost]
+2024-12-02 23:27:54,253 p=5724 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA]
+2024-12-02 23:27:54,277 p=5724 u=vagrant n=ansible | TASK [include_role : 2p_2024_charadia] ************************************************************************************************
+2024-12-02 23:27:54,357 p=5724 u=vagrant n=ansible | TASK [2p_2024_charadia : Imprimir mensaje] ********************************************************************************************
+2024-12-02 23:27:54,434 p=5724 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA] => {
+    "msg": "Me estoy ejecutando dentro del role: 2p_2024_charadia"
+}
+2024-12-02 23:27:54,458 p=5724 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Me estoy ejecutando dentro del role: 2p_2024_charadia"
+}
+2024-12-02 23:27:54,473 p=5724 u=vagrant n=ansible | TASK [Imprimir mensaje] ***************************************************************************************************************
+2024-12-02 23:27:54,542 p=5724 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA] => {
+    "msg": "Mensaje imprimido"
+}
+2024-12-02 23:27:54,554 p=5724 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Mensaje imprimido"
+}
+2024-12-02 23:27:54,566 p=5724 u=vagrant n=ansible | TASK [Otra tarea] *********************************************************************************************************************
+2024-12-02 23:27:54,611 p=5724 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-12-02 23:27:54,618 p=5724 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-12-02 23:27:54,641 p=5724 u=vagrant n=ansible | PLAY RECAP ****************************************************************************************************************************
+2024-12-02 23:27:54,642 p=5724 u=vagrant n=ansible | VM2-GRUPO-ANTARTIDA        : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-02 23:27:54,643 p=5724 u=vagrant n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 01:46:11,327 p=11541 u=vagrant n=ansible | PLAY [all] *****************************************************************************************
+2024-12-03 01:46:11,345 p=11541 u=vagrant n=ansible | TASK [Gathering Facts] *****************************************************************************
+2024-12-03 01:46:13,321 p=11541 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA]
+2024-12-03 01:46:13,645 p=11541 u=vagrant n=ansible | ok: [localhost]
+2024-12-03 01:46:13,665 p=11541 u=vagrant n=ansible | TASK [include_role : 2p_2024_charadia] *************************************************************
+2024-12-03 01:46:13,768 p=11541 u=vagrant n=ansible | TASK [2p_2024_charadia : Imprimir mensaje] *********************************************************
+2024-12-03 01:46:13,887 p=11541 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA] => {
+    "msg": "Me estoy ejecutando dentro del role: 2p_2024_charadia"
+}
+2024-12-03 01:46:13,915 p=11541 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Me estoy ejecutando dentro del role: 2p_2024_charadia"
+}
+2024-12-03 01:46:13,934 p=11541 u=vagrant n=ansible | TASK [Imprimir mensaje] ****************************************************************************
+2024-12-03 01:46:13,994 p=11541 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA] => {
+    "msg": "Mensaje imprimido"
+}
+2024-12-03 01:46:14,004 p=11541 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Mensaje imprimido"
+}
+2024-12-03 01:46:14,028 p=11541 u=vagrant n=ansible | TASK [Otra tarea] **********************************************************************************
+2024-12-03 01:46:14,087 p=11541 u=vagrant n=ansible | ok: [VM2-GRUPO-ANTARTIDA] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-12-03 01:46:14,107 p=11541 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-12-03 01:46:14,140 p=11541 u=vagrant n=ansible | PLAY RECAP *****************************************************************************************
+2024-12-03 01:46:14,141 p=11541 u=vagrant n=ansible | VM2-GRUPO-ANTARTIDA        : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-12-03 01:46:14,142 p=11541 u=vagrant n=ansible | localhost                  : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

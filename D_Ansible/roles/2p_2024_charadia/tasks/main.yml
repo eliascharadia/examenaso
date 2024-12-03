@@ -1,0 +1,6 @@
+---
+# tasks file for 2p_2024_charadia
+
+- name: Imprimir mensaje
+  ansible.builtin.debug:
+    msg: "Me estoy ejecutando dentro del role: {{ role_name }}"

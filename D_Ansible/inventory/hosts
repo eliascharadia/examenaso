@@ -1,0 +1,9 @@
+[all:children]
+testing
+produccion
+
+[testing]
+VM2-GRUPO-ANTARTIDA
+
+[produccion]
+localhost ansible_connection=local 

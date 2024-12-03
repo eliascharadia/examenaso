@@ -1,0 +1,22 @@
+---
+- hosts: 
+  - all
+
+  # Variables Globales
+  vars_files:
+    - vars/main.yml
+  
+  tasks:
+    - include_role:
+        name: 2p_2024_charadia  
+
+
+
+    - name: Imprimir mensaje
+      debug:
+        msg: "Mensaje imprimido"
+
+    - name: "Otra tarea"
+      debug:
+        msg: "Despues de la ejecucion del rol"
+

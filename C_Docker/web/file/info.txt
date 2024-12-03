@@ -1,0 +1,3 @@
+Hash del usuario: 
+Comando: "sudo grep vagrant /etc/shadow |awk -F ':' '{print }'"
+hola
